@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <!-- Tables -->
+    <include file="./tables/departments.sql" relativeToChangelogFile="true"/>
+    <include file="./tables/logs.sql" relativeToChangelogFile="true"/>
+    <include file="./tables/usertypes.sql" relativeToChangelogFile="true"/>
+    <include file="./tables/staffs.sql" relativeToChangelogFile="true"/>
+    <include file="./tables/students.sql" relativeToChangelogFile="true"/>
+
+    <!-- Triggers -->
+   <includeAll path="./triggers" relativeToChangelogFile="true" />
+
+    <!-- Functions -->
+    <includeAll path="./functions" relativeToChangelogFile="true"/>
+
+    <!-- Stored Procedures -->
+    <includeAll path="./stored_procedures" relativeToChangelogFile="true"/>
+
+    <!-- Views -->
+    <includeAll path="./views" relativeToChangelogFile="true"/>
+
+    <!-- Master Data -->
+    <include file="./master_data/md_departments.sql" relativeToChangelogFile="true"/>
+    <include file="./master_data/md_usertypes.sql" relativeToChangelogFile="true"/>
+
+</databaseChangeLog>
